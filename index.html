@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game (Jogo do dado)</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Jogador 1</h2>
+        <p class="score" id="score--0">43</p>
+        <p id="winnerText--0" class="name"></p>
+        <div class="current">
+          <p class="current-label">Pontos acumulados</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Jogador 2</h2>
+        <p class="score" id="score--1">24</p>
+        <p id="winnerText--1" class="name"></p>
+        <div class="current">
+          <p class="current-label">Pontos acumulados</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 Novo Jogo</button>
+      <button class="btn btn--roll">🎲 Rolar dado</button>
+      <button class="btn btn--hold">📥 Guardar pontos</button>
+    </main>
+
+    <button class="btn-howToPlay">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="btn-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <p class="text-btn">Como Jogar?</p>
+    </button>
+
+    <div class="text-HowToPlay hidden">
+      <button class="btn-closeTxt">&times;</button>
+      <p class="txtRules">
+        <strong>Como Jogar:</strong><br />
+        <strong>1</strong> - Role o dado e a numeração que cair será seus pontos;<br />
+        <strong>2</strong> - Você pode rolar o dado mais de uma vez para acumular mais pontos;<br />
+        <strong>3</strong> - Se cair o número 1 você perderá seus pontos acumulados e a vez passará para o próximo jogador;<br />
+        <strong>4</strong> - Utilize o botão <strong>'GUARDAR PONTOS'</strong> para não perder os pontos caso role
+        o número 1 e passar a vez para seu oponente;<br />
+        <strong>5</strong> - Ganha o jogador que acumular 100 pontos.<br />
+        <p id="txtBoaDiversao">BOA DIVERSÃO!!!</p>
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
